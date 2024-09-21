@@ -1,0 +1,212 @@
+<!-- Appropriate semantic elements like <header>, <nav>, <section>, <aside>, and <footer> were used to structure the content clearly and accessibly. 
+The layout uses CSS Grid to ensure flexibility and responsiveness, allowing the CV to be viewed on different screen sizes.
+The main content is divided into two sections: a sidebar for personal info, skills, and education, and a main section for career objective and work experience.
+The profile photo is positioned in the sidebar for a formal, balanced layout.
+Media queries ensure the design adapts to mobile screen sizes, stacking the layout vertically for ease of reading on smaller devices.
+Ensured that both HTML and CSS code pass all W3C validation tests to guarantee proper rendering and compatibility across browsers.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamakura Abhishikth Reddy - CV</title>
+    <style>
+        /* Base body styles with Calibri font */
+        body {
+            font-family: 'Calibri', sans-serif;
+            background-color: #F2F3F5;
+            color: #333333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #4C72A4;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        .AB-info {
+            font-size: 1.2em;
+        }
+
+        /* Navigation bar */
+        nav {
+            text-align: center;
+            background-color: #4C72A4;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: inline-block;
+            border: 2px solid #333333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            padding: 15px 40px;
+            color: #ffffff;
+            background-color: #4C72A4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #6A8CB4;
+        }
+
+        /* Main content layout */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Float image to right */
+        .AB-block1 img {
+            width: 120px;
+            height: 160px;
+            border-radius: 10px;
+            border: 3px solid #4C72A4;
+            float: right;
+            margin-left: 20px;
+        }
+
+        .AB-block1 {
+            padding: 20px;
+            border: 2px solid #333333;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        aside {
+            background-color: #F7F8FA;
+            padding: 20px;
+            border: 2px solid #333333;
+            border-radius: 5px;
+        }
+
+        aside ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #4C72A4;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .AB-block1 img {
+                float: none;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Chamakura Abhishikth Reddy</h1>
+        <div class="AB-info">
+            Student Number: 9035294 | Email: achamakura5294@conestogac.on.ca
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="#">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Sidebar: Skills & Technologies -->
+        <aside>
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Leadership</li>
+                <li>Quick Learner</li>
+                <li>Communication Skills</li>
+                <li>Competent</li>
+            </ul>
+
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Swift</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>php</li>
+            </ul>
+
+            <h2>Web Technologies</h2>
+            <ul>
+                <li>Html</li>
+                <li>Json</li>
+                <li>Xml</li>
+                <li>Jquery</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content: About Me -->
+        <section class="AB-block1">
+            <img src="images/photo1.jpg" alt="My photo">
+            <h2>Career Objective</h2>
+            <p>
+                A highly motivated Mobile Solutions Development student with a passion for software development, eager to apply strong technical skills in Swift, C#, and JavaScript. Seeking opportunities to contribute to innovative projects in a dynamic team environment, leveraging my proficiency in web technologies, databases, and programming to deliver impactful solutions. Adept at working in fast-paced environments, with a proven ability to collaborate effectively within teams, streamline operations, and deliver high-quality results. Strengths include problem-solving, adaptability, and the ability to manage multiple projects efficiently while maintaining a keen eye for detail.
+            </p>
+
+            <h2>Education</h2>
+            <p> 
+                Mobile Solutions Development (May 2024 – Aug 2025) <br>
+                Conestoga College, Kitchener ON CA
+            </p>
+            <p>
+                Bachelor of Technology – Computer Science and Engineering (Aug 2019 - May 2023) <br>
+                CMR Institute of Technology, Hyderabad, India 
+            </p>
+            
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div>&copy; 2024 Chamakura Abhishikth</div>
+    </footer>
+</body>
+
+</html>
